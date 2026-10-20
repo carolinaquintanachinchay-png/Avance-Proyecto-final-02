@@ -3,9 +3,10 @@ from pathlib import Path
 import pandas as pd
 
 
-CARPETA = Path(__file__).resolve().parent
-ARCHIVO = CARPETA.parent / "excel_slump.csv (1).xlsx"
-ARCHIVO_LIMPIO = CARPETA / "slump_limpio.csv"
+PROYECTO = Path(__file__).resolve().parents[1]
+CARPETA_DATOS = PROYECTO / "data"
+ARCHIVO = CARPETA_DATOS / "dataset.xlsx"
+ARCHIVO_LIMPIO = CARPETA_DATOS / "dataset.csv"
 
 VARIABLE_ID = "No."
 VARIABLE_OBJETIVO = "SLUMP (cm)"

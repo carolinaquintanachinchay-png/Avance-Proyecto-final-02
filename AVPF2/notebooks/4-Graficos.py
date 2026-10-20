@@ -5,12 +5,14 @@ import numpy as np
 import pandas as pd
 
 
-CARPETA = Path(__file__).resolve().parent
-ARCHIVO_DATOS = CARPETA / "slump_limpio.csv"
-ARCHIVO_GRAFICO = CARPETA / "grafico_slump_vs_agua.png"
-ARCHIVO_CORRELACION = CARPETA / "grafico_correlacion_slump.png"
-ARCHIVO_HISTOGRAMA = CARPETA / "histograma_slump.png"
-ARCHIVO_3D = CARPETA / "grafico_3d_slump.png"
+PROYECTO = Path(__file__).resolve().parents[1]
+CARPETA_DATOS = PROYECTO / "data"
+CARPETA_IMAGENES = PROYECTO / "imagenes"
+ARCHIVO_DATOS = CARPETA_DATOS / "dataset.csv"
+ARCHIVO_GRAFICO = CARPETA_IMAGENES / "grafico_slump_vs_agua.png"
+ARCHIVO_CORRELACION = CARPETA_IMAGENES / "grafico_correlacion_slump.png"
+ARCHIVO_HISTOGRAMA = CARPETA_IMAGENES / "histograma_slump.png"
+ARCHIVO_3D = CARPETA_IMAGENES / "grafico_3d_slump.png"
 
 VARIABLE_X = "Water"
 VARIABLE_Y = "SLUMP (cm)"

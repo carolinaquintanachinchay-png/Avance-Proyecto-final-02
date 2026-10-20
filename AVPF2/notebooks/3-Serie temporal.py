@@ -4,10 +4,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-CARPETA = Path(__file__).resolve().parent
-ARCHIVO_DATOS = CARPETA / "slump_limpio.csv"
-ARCHIVO_GRAFICO = CARPETA / "serie_slump_flow.png"
-ARCHIVO_SERIE = CARPETA / "serie_slump_flow.csv"
+PROYECTO = Path(__file__).resolve().parents[1]
+CARPETA_DATOS = PROYECTO / "data"
+CARPETA_IMAGENES = PROYECTO / "imagenes"
+ARCHIVO_DATOS = CARPETA_DATOS / "dataset.csv"
+ARCHIVO_GRAFICO = CARPETA_IMAGENES / "serie_slump_flow.png"
+ARCHIVO_SERIE = CARPETA_DATOS / "serie_slump_flow.csv"
 
 VARIABLE_ORDEN = "No."
 VARIABLE_SLUMP = "SLUMP (cm)"

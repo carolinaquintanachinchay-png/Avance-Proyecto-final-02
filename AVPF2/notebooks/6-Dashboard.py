@@ -11,8 +11,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 
 
-CARPETA = Path(__file__).resolve().parent
-ARCHIVO_DATOS = CARPETA / "slump_limpio.csv"
+PROYECTO = Path(__file__).resolve().parents[1]
+ARCHIVO_DATOS = PROYECTO / "data" / "dataset.csv"
 VARIABLE_OBJETIVO = "SLUMP (cm)"
 PREDICTORES = [
     "Cement",
@@ -34,7 +34,7 @@ st.set_page_config(page_title="Dashboard de asentamiento", page_icon="📊", lay
 def cargar_datos():
     if not ARCHIVO_DATOS.exists():
         raise FileNotFoundError(
-            f"No se encontró {ARCHIVO_DATOS}. Ejecuta primero 1-Limpieza Datos.py."
+            f"No se encontró {ARCHIVO_DATOS}. Ejecuta primero notebooks/1-Limpieza Datos.py."
         )
 
     datos = pd.read_csv(ARCHIVO_DATOS)
@@ -357,7 +357,7 @@ def main():
         st.download_button(
             "Descargar datos limpios (CSV)",
             data=datos.to_csv(index=False).encode("utf-8-sig"),
-            file_name="slump_limpio.csv",
+            file_name="dataset.csv",
             mime="text/csv",
         )
 

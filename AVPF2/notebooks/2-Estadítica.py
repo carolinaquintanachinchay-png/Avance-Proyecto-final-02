@@ -3,10 +3,11 @@ from pathlib import Path
 import pandas as pd
 
 
-CARPETA = Path(__file__).resolve().parent
-ARCHIVO_DATOS = CARPETA / "slump_limpio.csv"
-ARCHIVO_RESUMEN = CARPETA / "resumen_estadistico.csv"
-ARCHIVO_CORRELACIONES = CARPETA / "correlaciones_slump.csv"
+PROYECTO = Path(__file__).resolve().parents[1]
+CARPETA_DATOS = PROYECTO / "data"
+ARCHIVO_DATOS = CARPETA_DATOS / "dataset.csv"
+ARCHIVO_RESUMEN = CARPETA_DATOS / "resumen_estadistico.csv"
+ARCHIVO_CORRELACIONES = CARPETA_DATOS / "correlaciones_slump.csv"
 
 VARIABLE_ID = "No."
 VARIABLE_OBJETIVO = "SLUMP (cm)"

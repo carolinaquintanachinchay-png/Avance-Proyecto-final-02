@@ -11,13 +11,16 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 
 
-CARPETA = Path(__file__).resolve().parent
-ARCHIVO_DATOS = CARPETA / "slump_limpio.csv"
-ARCHIVO_METRICAS = CARPETA / "metricas_prediccion_slump.csv"
-ARCHIVO_PREDICCIONES = CARPETA / "predicciones_validacion_slump.csv"
-ARCHIVO_GRAFICO = CARPETA / "comparacion_predicciones_slump.png"
-ARCHIVO_MODELO_LINEAL = CARPETA / "modelo_regresion_lineal_slump.joblib"
-ARCHIVO_MODELO_POLINOMIAL = CARPETA / "modelo_regresion_polinomial_slump.joblib"
+PROYECTO = Path(__file__).resolve().parents[1]
+CARPETA_DATOS = PROYECTO / "data"
+CARPETA_IMAGENES = PROYECTO / "imagenes"
+CARPETA_MODELOS = PROYECTO / "modelos"
+ARCHIVO_DATOS = CARPETA_DATOS / "dataset.csv"
+ARCHIVO_METRICAS = CARPETA_DATOS / "metricas_prediccion_slump.csv"
+ARCHIVO_PREDICCIONES = CARPETA_DATOS / "predicciones_validacion_slump.csv"
+ARCHIVO_GRAFICO = CARPETA_IMAGENES / "comparacion_predicciones_slump.png"
+ARCHIVO_MODELO_LINEAL = CARPETA_MODELOS / "modelo_regresion_lineal_slump.joblib"
+ARCHIVO_MODELO_POLINOMIAL = CARPETA_MODELOS / "modelo_regresion_polinomial_slump.joblib"
 
 VARIABLE_OBJETIVO = "SLUMP (cm)"
 PREDICTORES = [
@@ -56,7 +59,7 @@ def crear_modelos():
 def main():
     if not ARCHIVO_DATOS.exists():
         raise FileNotFoundError(
-            f"No se encontró {ARCHIVO_DATOS}. Ejecuta primero 1-Limpieza Datos.py."
+            f"No se encontró {ARCHIVO_DATOS}. Ejecuta primero notebooks/1-Limpieza Datos.py."
         )
 
     datos = pd.read_csv(ARCHIVO_DATOS)
