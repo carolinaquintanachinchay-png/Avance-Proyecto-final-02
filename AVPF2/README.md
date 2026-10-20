@@ -20,7 +20,8 @@ AVPF2/
 │   ├── 3-Serie temporal.py
 │   ├── 4-Graficos.py
 │   ├── 5-Predicciones.py
-│   └── 6-Dashboard.py
+│   ├── 6-Dashboard.py
+│   └── requirements.txt
 ├── reportes/
 │   └── Informe.pdf
 ├── imagenes/
@@ -32,6 +33,7 @@ AVPF2/
 - `data/dataset.xlsx` es el archivo Excel original. `data/dataset.csv` contiene los datos limpios que consumen los análisis y el dashboard.
 - `dashboard/Dashboard_AVPF2.html` es la página HTML de presentación del proyecto.
 - `notebooks/` contiene los scripts Python de limpieza, análisis, gráficos, predicción y la aplicación de Streamlit.
+- `notebooks/requirements.txt` declara las dependencias en la misma carpeta que el script principal para que Streamlit Community Cloud las instale al desplegarlo. `requirements.txt` en la raíz de `AVPF2/` sirve para la instalación local.
 - `reportes/Informe.pdf` contiene el informe del proyecto.
 - `imagenes/` almacena las gráficas generadas y `modelos/` los modelos entrenados.
 - Los CSV de estadísticas, correlaciones, métricas, predicciones y series también se guardan en `data/`.
