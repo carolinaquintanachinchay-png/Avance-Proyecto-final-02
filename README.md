@@ -29,6 +29,7 @@ El dataset no incluye fechas; por ello, los gráficos por número de muestra rep
 - **Streamlit** para el dashboard interactivo.
 - **Openpyxl** para leer el archivo Excel.
 - **HTML y CSS** para la página de presentación `index.html`.
+- **Streamlit** para creación del Dashboard interactivo.
 
 ## KPIs
 
